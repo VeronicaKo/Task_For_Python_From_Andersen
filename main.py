@@ -6,7 +6,7 @@ if __name__ == '__main__':
         int(task)
     except ValueError:
         print('It is not number.')
-        sys.exit()
+        raise
 
     if task == '1':
         word1 = input('Write a number: ')
