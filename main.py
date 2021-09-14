@@ -18,20 +18,13 @@ if __name__ == '__main__':
     elif task == '2':
         word2 = input('What is your name? ')
         if word2 == 'Вячеслав':
-            print('Вячеслав')
+            print('Привет, Вячеслав')
         else:
             print('Нет такого имени')
     elif task == '3':
-        word3 = input('Write an array of numbers: ')
-        try:
-            check1 = int(word3)
-            f1 = list(word3)
-            print('Array elements that are multiples of 3:')
-            for i in f1:
-                if int(i) % 3 == 0:
-                    print(i)
-        except ValueError:
-            print('The array has not only numbers.')
+        word3 = [int(el) for el in input('Write an array of numbers: ').split()]
+        del3 = [i for i in word3 if i % 3 == 0]
+        print(del3)
     elif task == '4':
         # [((())()(())]]
         s = input('Введите скобочную последовательность: ')
